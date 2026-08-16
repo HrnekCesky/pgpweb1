@@ -21,19 +21,19 @@ def getkey_post():
 @route('/api/getkey/')
 @route('/api/getkey')
 def getkey_list():
-    return {'keys': [f.name for f in Path('key').glob('*.asc')]}
+    return #todoooooo (list all keys in the key directory)
 
 @route('/api/addkey', method='POST')
 @route('/api/addkey/', method='POST')
 def addkey_post():
     name = request.forms.get('name')
     key = request.forms.get('key')
-    if Path(f"key/{name}-public.asc").exists():
+    if False: #todoooooo (path exists)
+        #todoooooo (create the key and write it)
         response.status = 409
         return "Key already exists."
     else: 
-        with open(f"key/{name}-public.asc", "x") as f:
-            f.write(str(key))
+        #todoooooo
         response.status = 201
         return "Key added successfully."
 
@@ -41,8 +41,8 @@ def addkey_post():
 @route('/api/remkey/', method='POST')
 def remkey_post():
     name = request.forms.get('name')
-    if Path(f"key/{name}-public.asc").exists():
-        Path(f"key/{name}-public.asc").unlink()
+    if False: #todoooooo (path exists)
+        #todoooooo (remove the key)
         response.status = 201
         return "Key removed successfully."
     else:
@@ -51,9 +51,8 @@ def remkey_post():
 
 @route('/api/getkey/<name>', method='GET')
 def getkey_get(name):
-    if Path(f"key/{name}-public.asc").exists():
-        with open(f"key/{name}-public.asc", "r", encoding="utf-8") as f:
-            key = f.read()
+    if False: #todoooooo (path exists)
+        #todoooooo (read the key from the file)
         response.content_type = 'application/pgp-keys'
         return key
     else:
