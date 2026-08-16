@@ -35,7 +35,6 @@
     <Compile Include="key_management.py" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="key\" />
     <Folder Include="pgpp\" />
     <Folder Include="static\" />
     <Folder Include="static\content\" />
