@@ -2,20 +2,19 @@
 Routes and views for the bottle application.
 """
 
+import os
 from bottle import route, view, static_file
 from datetime import datetime
 
+# Use an explicit base directory for static files so the app works both
+# in Vercel serverless environment and when running locally.
+BASE_DIR = os.path.dirname(__file__)
+
 @route('/')
 @route('/home')
-@view('index')
-# def home():
-#     """Renders the home page."""
-#     return dict(
-#         year=datetime.now().year
-#     )
-
 def home():
-    return static_file("index.html", root="")
+    # Serve the index.html located in the package directory
+    return static_file("index.html", root=BASE_DIR)
 
 
 @route('/contact')
@@ -27,6 +26,7 @@ def contact():
         message='Your contact page.',
         year=datetime.now().year
     )
+
 
 @route('/about')
 @view('about')
