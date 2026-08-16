@@ -1,4 +1,5 @@
 from bottle import route, request, response
+from pathlib import Path
 
 @route('/api')
 @route('/api/')
@@ -13,7 +14,14 @@ def addkey_get():
     return {'message': 'Please use POST method to add a key.'}
 
 
-from pathlib import Path
+@route('/api/getkey/<name>', method='POST')
+def getkey_post():
+    return {'message': 'Please use GET method to get a key.'}
+
+@route('/api/getkey/')
+@route('/api/getkey')
+def getkey_list():
+    return {'keys': [f.name for f in Path('key').glob('*.asc')]}
 
 @route('/api/addkey', method='POST')
 @route('/api/addkey/', method='POST')
