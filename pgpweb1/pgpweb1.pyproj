@@ -32,10 +32,11 @@
   <ItemGroup>
     <Compile Include="app.py" />
     <Compile Include="routes.py" />
-    <Compile Include="web1.py" />
+    <Compile Include="key_management.py" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="neco\" />
+    <Folder Include="key\" />
+    <Folder Include="pgpp\" />
     <Folder Include="static\" />
     <Folder Include="static\content\" />
     <Folder Include="static\fonts\" />
@@ -43,7 +44,8 @@
     <Folder Include="views\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="neco\a.html" />
+    <Content Include="index.html" />
+    <Content Include="pgpp\neco" />
     <Content Include="requirements.txt" />
     <Content Include="static\content\bootstrap.css" />
     <Content Include="static\content\bootstrap.min.css" />
