@@ -30,14 +30,12 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="api\index.py" />
     <Compile Include="app.py" />
     <Compile Include="routes.py" />
     <Compile Include="key_management.py" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="key\" />
-    <Folder Include="api\" />
     <Folder Include="pgpp\" />
     <Folder Include="static\" />
     <Folder Include="static\content\" />
