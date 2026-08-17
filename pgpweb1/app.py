@@ -11,8 +11,6 @@ import routes
 
 import key_management
 
-bottle.TEMPLATE_PATH = 'pgpweb1/views'
-
 if '--debug' in sys.argv[1:] or 'SERVER_DEBUG' in os.environ:
     # Debug mode will enable more verbose output in the console window.
     # It must be set at the beginning of the script.
@@ -27,6 +25,7 @@ if __name__ == '__main__':
     PROJECT_ROOT = os.path.abspath(os.path.dirname(__file__))
     STATIC_ROOT = os.path.join(PROJECT_ROOT, 'static').replace('\\', '/')
     HOST = os.environ.get('SERVER_HOST', 'localhost')
+    bottle.TEMPLATE_PATH.insert(0, os.path.join(PROJECT_ROOT, 'views'))
     try:
         PORT = int(os.environ.get('SERVER_PORT', '80'))
     except ValueError:
