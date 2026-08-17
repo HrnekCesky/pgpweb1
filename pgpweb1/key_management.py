@@ -33,7 +33,7 @@ def getkey_list():
 def addkey_post():
     name = request.forms.get('name')
     key = request.forms.get('key')
-    if True: #todoooooo (path exists)
+    if False: #todoooooo (path exists)
         #todoooooo
         response.status = 409
         return "Key already exists."
