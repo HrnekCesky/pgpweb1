@@ -26,7 +26,7 @@ def getkey_post():
 @route('/api/getkey/')
 @route('/api/getkey')
 def getkey_list():
-    return #todoooooo (list all keys in the key directory)
+    return blob.list()
 
 @route('/api/addkey', method='POST')
 @route('/api/addkey/', method='POST')
@@ -39,7 +39,7 @@ def addkey_post():
         return "Key already exists."
     else: 
         #todoooooo (create the key and write it)
-        out = blob.put(f"{name}", key.encode('utf-8'))
+        out = blob.put(f"{name}.asc", key.encode('utf-8'))
         response.status = 201
         return f"Key added successfully. {out}"
 
