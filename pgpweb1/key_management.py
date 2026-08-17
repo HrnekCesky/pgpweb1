@@ -2,7 +2,7 @@ from bottle import route, request, response
 from pathlib import Path
 import vercel_blob as blob
 
-BLOB_API_URL = "https://vxwwmkyy1varceo3.private.blob.vercel-storage.com"
+BLOB_API_URL = "https://ehvlb7betcblpmyb.public.blob.vercel-storage.com"
 
 #fail scenarios
 @route('/api')
@@ -39,7 +39,7 @@ def addkey_post():
         return "Key already exists."
     else: 
         #todoooooo (create the key and write it)
-        out = blob.put(f"{name}", key.encode('utf-8'), access="private")
+        out = blob.put(f"{name}", key.encode('utf-8'))
         response.status = 201
         return f"Key added successfully. {out}"
 
