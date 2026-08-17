@@ -30,10 +30,7 @@
 
     <div class="container body-content">
         {{!base}}
-        <hr />
-        <footer>
-            <p>DIY PGP Web API</</p>
-        </footer>y
+
     </div>
 
     <script src="/static/scripts/jquery-1.10.2.js"></script>

@@ -73,7 +73,9 @@
     <Content Include="static\scripts\_references.js" />
     <Content Include="vercel.json" />
     <Content Include="views\about.tpl" />
-    <Content Include="views\api-frontend.tpl" />
+    <Content Include="views\api-frontend-remkey.tpl" />
+    <Content Include="views\api-frontend-getkey.tpl" />
+    <Content Include="views\api-frontend-addkey.tpl" />
     <Content Include="views\contact.tpl" />
     <Content Include="views\index.tpl" />
     <Content Include="views\layout-gui.tpl" />

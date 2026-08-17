@@ -18,7 +18,8 @@ def addkey_get():
 
 
 @route('/api/getkey/<name>', method='POST')
-def getkey_post():
+@route('/api/getkey/<name>/', method='POST')
+def getkey_post(name):
     return {'message': 'Please use GET method to get a key.'}
 
 #success scenarios
