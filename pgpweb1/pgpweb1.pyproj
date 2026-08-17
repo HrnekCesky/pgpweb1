@@ -32,11 +32,11 @@
   <ItemGroup>
     <Compile Include="app.py" />
     <Compile Include="crypt.py" />
+    <Compile Include="gui.py" />
     <Compile Include="routes.py" />
     <Compile Include="key_management.py" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="gui\" />
     <Folder Include="pgpp\" />
     <Folder Include="static\" />
     <Folder Include="static\content\" />
@@ -45,10 +45,10 @@
     <Folder Include="views\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="gui\index.html" />
     <Content Include="index.html" />
     <Content Include="pgpp\neco" />
     <Content Include="requirements.txt" />
+    <Content Include="static\content\api-frontend.css" />
     <Content Include="static\content\bootstrap.css" />
     <Content Include="static\content\bootstrap.min.css" />
     <Content Include="static\content\site.css" />
@@ -73,8 +73,10 @@
     <Content Include="static\scripts\_references.js" />
     <Content Include="vercel.json" />
     <Content Include="views\about.tpl" />
+    <Content Include="views\api-frontend.tpl" />
     <Content Include="views\contact.tpl" />
     <Content Include="views\index.tpl" />
+    <Content Include="views\layout-gui.tpl" />
     <Content Include="views\layout.tpl" />
   </ItemGroup>
   <ItemGroup>

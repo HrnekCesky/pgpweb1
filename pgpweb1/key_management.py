@@ -1,5 +1,4 @@
 from bottle import route, request, response
-from pathlib import Path
 import vercel_blob as blob
 
 BLOB_API_URL = "https://ehvlb7betcblpmyb.public.blob.vercel-storage.com"
