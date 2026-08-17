@@ -33,7 +33,7 @@ def getkey_list():
 def addkey_post():
     name = request.forms.get('name')
     key = request.forms.get('key')
-    if blob.head(f"{name}.asc"):
+    if blob.head(f"{name}.asc") == Exception:
         response.status = 409
         return "Key already exists."
     else: 
