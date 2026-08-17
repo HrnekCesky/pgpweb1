@@ -39,7 +39,7 @@ def addkey_post():
         return "Key already exists."
     else: 
         #todoooooo (create the key and write it)
-        out = blob.put(f"{name}", key.encode('utf-8'))
+        out = blob.put(f"{name}", key.encode('utf-8'), options={"access": "private"})
         response.status = 201
         return f"Key added successfully. {out}"
 
