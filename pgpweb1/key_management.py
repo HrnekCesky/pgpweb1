@@ -51,7 +51,7 @@ def remkey_post():
 
 @route('/api/getkey', method='GET')
 @route('/api/getkey/', method='GET')
-def getkey_get(name):
+def getkey_get():
     name = request.forms.get('name')
     if name == None:
         return blob.list()
