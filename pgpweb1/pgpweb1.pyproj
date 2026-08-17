@@ -36,6 +36,7 @@
     <Compile Include="key_management.py" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="gui\" />
     <Folder Include="pgpp\" />
     <Folder Include="static\" />
     <Folder Include="static\content\" />
@@ -44,6 +45,7 @@
     <Folder Include="views\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="gui\index.html" />
     <Content Include="index.html" />
     <Content Include="pgpp\neco" />
     <Content Include="requirements.txt" />

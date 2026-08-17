@@ -53,8 +53,9 @@ def remkey_post():
 @route('/api/getkey/', method='GET')
 def getkey_get():
     name = request.forms.get('name')
-    # if name == None:
-    #     return blob.list()
+    if name == None:
+        #return blob.list()
+        return {'message': 'Please provide a key name to retrieve.'}
     if blob.head(f"{name}.asc") != Exception:
         out = blob.head(f"{name}.asc")
         return out
