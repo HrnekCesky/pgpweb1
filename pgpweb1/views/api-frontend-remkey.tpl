@@ -1,4 +1,4 @@
-% rebase('layout-gui.tpl', apipath=apipath title='Remove Key')
+% rebase('layout-gui.tpl', apipath=apipath, title='Remove Key')
 
 <div class="cont">
     <h1>PGP Key Management</h1>
