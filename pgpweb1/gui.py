@@ -6,7 +6,7 @@ from bottle import route, request, response, view
 def gui():
     return dict(
         title='PGP Web GUI',
-        base='<a href="/gui/get">Get Key</a><br> <a href="/gui/add">Add Key</a><br> <a href="/gui/rem">Remove Key</a><br> <a href="/gui/encrypt">Encrypt</a><br>'
+        base='<a href="/gui/get">Get Key</a><br> <a href="/gui/add">Add Key</a><br> <a href="/gui/rem">Remove Key</a><br> <a href="/gui/encrypt">Encrypt</a><br> <a href="/gui/sign">Sign</a><br>'
         )
 
 @route('/gui/get')
@@ -39,5 +39,13 @@ def rem():
 def encrypt():
     return dict(
         apipath='/api/encrypt'
+        )
+
+@route('/gui/sign')
+@route('/gui/sign/')
+@view('api-frontend-sign')
+def sign():
+    return dict(
+        apipath='/api/sign'
         )
 

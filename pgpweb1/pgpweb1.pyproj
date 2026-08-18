@@ -73,6 +73,7 @@
     <Content Include="static\scripts\_references.js" />
     <Content Include="vercel.json" />
     <Content Include="views\about.tpl" />
+    <Content Include="views\api-frontend-sign.tpl" />
     <Content Include="views\api-frontend-encrypt.tpl" />
     <Content Include="views\api-frontend.tpl" />
     <Content Include="views\api-frontend-remkey.tpl" />
