@@ -3,7 +3,7 @@ from datetime import datetime
 
 @route('/gui')
 @route('/gui/')
-@view('layout-gui')
+@view('api-frontend')
 def gui():
     return dict(
         title='PGP Web GUI',
