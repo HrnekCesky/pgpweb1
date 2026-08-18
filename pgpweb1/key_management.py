@@ -31,12 +31,13 @@ def addkey_post():
     key = request.forms.get('key')
     try:
         blob.head(f"{name}.asc")
+        response.status = 409
+        return f"Key already exists. {a}"
+
+    except Exception as a:
         out = blob.put(f"{name}.asc", key.encode('utf-8'))
         response.status = 201
         return f"Key added successfully. {out}"
-    except Exception as a:
-        response.status = 409
-        return f"Key already exists. {a}"
 
 @route('/api/remkey', method='POST')
 @route('/api/remkey/', method='POST')
