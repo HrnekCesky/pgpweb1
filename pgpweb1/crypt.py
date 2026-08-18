@@ -18,5 +18,5 @@ def encrypt_post():
     out = public_key[0].encrypt(message)
     return dict(
         title='Encrypted Message',
-        base=f'<pre style="background-color: transparent; color: black;">{out}</pre>'
+        base=f'<pre style="background-color: transparent; color: black; border: 0px;">{out}</pre>'
     )
