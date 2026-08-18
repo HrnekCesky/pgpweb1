@@ -15,4 +15,4 @@ def encrypt_post():
     message = pgpy.PGPMessage.new(str(text))
     #encrypt text
     out = public_key[0].encrypt(message)
-    return f"{out.replace('', '\\n')}"
+    return f"{str(out).replace(' ', '\n')}"
