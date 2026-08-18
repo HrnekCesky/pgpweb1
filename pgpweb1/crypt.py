@@ -1,4 +1,4 @@
-from bottle import route, request, response
+from bottle import route, request, response, view
 import requests
 
 import pgpy
@@ -7,6 +7,7 @@ BLOB_API_URL = "https://ehvlb7betcblpmyb.public.blob.vercel-storage.com"
 
 @route('/api/encrypt', method='POST')
 @route('/api/encrypt/', method='POST')
+@view('api-frontend')
 def encrypt_post():
     name = request.forms.get('name')
     text = request.forms.get('text')
@@ -15,4 +16,7 @@ def encrypt_post():
     message = pgpy.PGPMessage.new(str(text))
     #encrypt text
     out = public_key[0].encrypt(message)
-    return f"{out}"
+    return dict(
+        title='Encrypted Message',
+        base=f'<pre>{out}</pre>'
+    )

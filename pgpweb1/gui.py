@@ -1,4 +1,4 @@
-from bottle import route, request, response, view, SimpleTemplate
+from bottle import route, request, response, view
 
 @route('/gui')
 @route('/gui/')
