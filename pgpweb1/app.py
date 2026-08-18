@@ -5,6 +5,7 @@ import sys
 import routes
 import key_management
 import gui
+import crypt
 
 # --- Move this setup to module-level (OUTSIDE __main__) ---
 PROJECT_ROOT = os.path.abspath(os.path.dirname(__file__))
