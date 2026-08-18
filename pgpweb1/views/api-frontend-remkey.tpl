@@ -5,7 +5,7 @@
     <h2>Remove Key</h2>
     <div class="form-group">
         <form action="{{ apipath }}" method="POST">
-            <input type="text" placeholder="name" id="name" />
+            <input type="text" placeholder="name" name="name" />
             <button type="submit">Submit</button>
         </form>
     </div>

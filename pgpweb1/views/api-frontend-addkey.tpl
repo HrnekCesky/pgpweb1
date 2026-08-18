@@ -5,8 +5,8 @@
     <h2>Add Key</h2>
     <div class="form-group">
         <form action="{{ apipath }}" method="POST">
-            <input type="text" placeholder="name" id="name" />
-            <input type="text" placeholder="key" id="key" />
+            <input type="text" placeholder="name" name="name" />
+            <input type="text" placeholder="key" name="key" />
             <button type="submit">Submit</button>
         </form>
     </div>
