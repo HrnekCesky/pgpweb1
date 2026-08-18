@@ -4,6 +4,7 @@ body {
 }
 
 .cont {
+    margin-top: 3em;
     max-width: 600px;
     margin: 50px auto;
     padding: 20px;
@@ -13,7 +14,7 @@ body {
     border-radius: 50px;
 }
 
-h1 {
+h1, h2 {
     text-align: center;
     color: #333;
 }

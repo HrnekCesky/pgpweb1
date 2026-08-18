@@ -17,10 +17,10 @@ def addkey_get():
     return {'message': 'Please use POST method to add a key.'}
 
 
-@route('/api/getkey/<name>', method='POST')
-@route('/api/getkey/<name>/', method='POST')
-def getkey_post(name):
-    return {'message': 'Please use GET method to get a key.'}
+# @route('/api/getkey/<name>', method='POST')
+# @route('/api/getkey/<name>/', method='POST')
+# def getkey_post(name):
+#     return {'message': 'Please use GET method to get a key.'}
 
 #success scenarios
 
@@ -49,8 +49,8 @@ def remkey_post():
         response.status = 404
         return "Key not found."
 
-@route('/api/getkey', method='GET')
-@route('/api/getkey/', method='GET')
+@route('/api/getkey', method='POST')
+@route('/api/getkey/', method='POST')
 def getkey_get():
     name = request.forms.get('name')
     if name == None:
