@@ -30,7 +30,7 @@ def addkey_post():
     name = request.forms.get('name')
     key = request.forms.get('key')
     try:
-        blob.head(f"{name}.asc") == Exception
+        blob.head(f"{name}.asc")
         out = blob.put(f"{name}.asc", key.encode('utf-8'))
         response.status = 201
         return f"Key added successfully. {out}"
