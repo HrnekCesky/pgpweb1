@@ -1,5 +1,3 @@
-from tkinter import N
-
 from bottle import route, request, response
 import requests
 
