@@ -6,7 +6,7 @@ from bottle import route, request, response, view
 def gui():
     return dict(
         title='PGP Web GUI',
-        base='<a href="/gui/get">Get Key</a><br> <a href="/gui/add">Add Key</a><br> <a href="/gui/rem">Remove Key</a><br>'
+        base='<a href="/gui/get">Get Key</a><br> <a href="/gui/add">Add Key</a><br> <a href="/gui/rem">Remove Key</a><br> <a href="/gui/encrypt">Encrypt</a><br>'
         )
 
 @route('/gui/get')
