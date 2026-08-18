@@ -18,5 +18,20 @@ def encrypt_post():
     out = public_key[0].encrypt(message)
     return dict(
         title='Encrypted Message',
-        base=f'<pre style="background-color: transparent; color: black; border: 0px;">{out}</pre>'
+        base=f'<pre>{out}</pre>'
+    )
+
+@route('/api/sign', method='POST')
+@route('/api/sign/', method='POST')
+def sign_post():
+    name = request.forms.get('name')
+    text = request.forms.get('text')
+    #get stuff 
+    private_key = pgpy.PGPKey.from_blob(str(requests.get(f"{BLOB_API_URL}/{name}.asc").text))
+    message = pgpy.PGPMessage.new(str(text))
+    #sign text
+    out = private_key[0].sign(message)
+    return dict(
+        title='Signed Message',
+        base=f'<pre>{out}</pre>'
     )
