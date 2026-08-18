@@ -9,11 +9,6 @@ def gui():
         title='PGP Web GUI',
         base='<a href="/gui/get">Get Key</a><br> <a href="/gui/add">Add Key</a><br> <a href="/gui/rem">Remove Key</a><br>'
         )
-    # return dict(
-    #     title='PGP Web GUI',
-    #     body='<a href="/gui/get">Get Key</a><br> <a href="/gui/add">Add Key</a><br> <a href="/gui/rem">Remove Key</a><br>'
-    #     )
-
 
 @route('/gui/get')
 @route('/gui/get/')
