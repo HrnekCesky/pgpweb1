@@ -14,5 +14,5 @@ def encrypt_post():
     public_key = pgpy.PGPKey.from_blob(str(requests.get(f"{BLOB_API_URL}/{name}.asc").text))
     message = pgpy.PGPMessage.new(str(text))
     #encrypt text
-    out = public_key.encrypt(message)
+    out = public_key[0].encrypt(message)
     return f"{out}"
