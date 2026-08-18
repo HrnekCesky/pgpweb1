@@ -22,3 +22,8 @@ h1, h2 {
 .form-group {
     margin-top: 2em;
 }
+
+a {
+    color: #333;
+    text-decoration: none;
+}
