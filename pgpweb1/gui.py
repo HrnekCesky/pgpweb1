@@ -1,4 +1,4 @@
-from bottle import route, request, response, view
+from bottle import route, request, response, view, SimpleTemplate
 from datetime import datetime
 
 @route('/gui')
@@ -7,8 +7,12 @@ from datetime import datetime
 def gui():
     return dict(
         title='PGP Web GUI',
-        body='<a href="/gui/get">Get Key</a><br> <a href="/gui/add">Add Key</a><br> <a href="/gui/rem">Remove Key</a><br>'
+        base='<a href="/gui/get">Get Key</a><br> <a href="/gui/add">Add Key</a><br> <a href="/gui/rem">Remove Key</a><br>'
         )
+    # return dict(
+    #     title='PGP Web GUI',
+    #     body='<a href="/gui/get">Get Key</a><br> <a href="/gui/add">Add Key</a><br> <a href="/gui/rem">Remove Key</a><br>'
+    #     )
 
 
 @route('/gui/get')
