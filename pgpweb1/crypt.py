@@ -10,6 +10,9 @@ BLOB_API_URL = "https://ehvlb7betcblpmyb.public.blob.vercel-storage.com"
 def encrypt_post():
     name = request.forms.get('name')
     text = request.forms.get('text')
-    key = pgpy.PGPKey.from_blob(requests.get(f"{BLOB_API_URL}/{name}.asc").text)
-    out = str(key)
+    #get stuff 
+    public_key = pgpy.PGPKey.from_blob(requests.get(f"{BLOB_API_URL}/{name}.asc").text)
+    message = pgpy.PGPMessage.new(text)
+    #encrypt text
+    out = public_key.encrypt(message)
     return f"{out}"
