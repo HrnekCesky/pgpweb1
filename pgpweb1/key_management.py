@@ -31,7 +31,7 @@ def addkey_post():
     key = request.forms.get('key')
     try:
         blob.head(f"{name}.asc")
-        response.status = 409
+        response.status = 218
         return f"Key already exists. {a}"
 
     except Exception as a:
@@ -48,7 +48,7 @@ def remkey_post():
         response.status = 201
         return f"Key removed successfully. {out}"
     else:
-        response.status = 404
+        response.status = 218
         return "Key not found."
 
 @route('/api/getkey', method='POST')
@@ -58,9 +58,10 @@ def getkey_get():
     if name == None:
         #return blob.list()
         return {'message': 'Please provide a key name to retrieve.'}
-    if blob.head(f"{name}.asc") != Exception:
+    try:
         out = blob.head(f"{name}.asc")
+        response.status = 201
         return out
-    else:
-        response.status = 404
-        return "Key not found."
+    except Exception as e:
+        response.status = 218
+        return f"Error occurred while retrieving key. {e}"
