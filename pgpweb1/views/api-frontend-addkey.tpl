@@ -6,7 +6,7 @@
     <div class="form-group">
         <form action="{{ apipath }}" method="POST">
             <input type="text" placeholder="name" name="name" />
-            <input type="text" placeholder="key" name="key" />
+            <textarea placeholder="key" name="key"></textarea>
             <button type="submit">Submit</button>
         </form>
     </div>
