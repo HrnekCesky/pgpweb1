@@ -12,7 +12,7 @@ def encrypt_post():
     text = request.forms.get('text')
     #get stuff 
     public_key = pgpy.PGPKey.from_blob(requests.get(f"{BLOB_API_URL}/{name}.asc").text)
-    message = pgpy.PGPMessage.new(text)
+    message = pgpy.PGPMessage.new(str(text))
     #encrypt text
-    out = public_key.encrypt(message)
+    out = public_key.pgpy.encrypt(message)
     return f"{out}"
