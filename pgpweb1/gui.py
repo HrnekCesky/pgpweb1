@@ -33,6 +33,11 @@ def rem():
         apipath='/api/remkey'
         )
 
-
-
+@route('/gui/encrypt')
+@route('/gui/encrypt/')
+@view('api-frontend-encrypt')
+def encrypt():
+    return dict(
+        apipath='/api/encrypt'
+        )
 
