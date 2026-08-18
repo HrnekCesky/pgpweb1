@@ -1,5 +1,4 @@
 from bottle import route, request, response, view, SimpleTemplate
-from datetime import datetime
 
 @route('/gui')
 @route('/gui/')
